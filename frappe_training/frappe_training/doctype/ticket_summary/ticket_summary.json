@@ -1,0 +1,101 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-12-14 13:56:16.982581",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_3nzj",
+  "naming_series",
+  "customer",
+  "column_break_timj",
+  "total_hours",
+  "section_break_fkcm",
+  "tickets",
+  "section_break_jyld",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_3nzj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Ticket Summary",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "column_break_timj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_hours",
+   "fieldtype": "Int",
+   "label": "Total Hours",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_jyld",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_fkcm",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "tickets",
+   "fieldtype": "Table",
+   "label": "Tickets",
+   "options": "Ticket Summary Line"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Naming Series",
+   "options": "FS-",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-12-14 15:56:36.145074",
+ "modified_by": "Administrator",
+ "module": "Frappe Training",
+ "name": "Ticket Summary",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
