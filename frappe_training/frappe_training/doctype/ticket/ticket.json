@@ -12,6 +12,7 @@
   "subject",
   "raised_by",
   "customer",
+  "update_customer",
   "column_break_kmed",
   "due_date",
   "due_in_days",
@@ -111,7 +112,8 @@
    "fieldname": "customer",
    "fieldtype": "Link",
    "label": "Customer",
-   "options": "Customer"
+   "options": "Customer",
+   "read_only_depends_on": "eval:doc.docstatus==1;"
   },
   {
    "fieldname": "amended_from",
@@ -158,13 +160,20 @@
   {
    "fieldname": "due_in_days",
    "fieldtype": "Int",
-   "label": "Due In Days"
+   "label": "Due In Days",
+   "read_only": 1
+  },
+  {
+   "fieldname": "update_customer",
+   "fieldtype": "Button",
+   "label": "Update Customer",
+   "options": "update_customer"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-12-15 15:49:52.478744",
+ "modified": "2024-12-15 18:08:45.345129",
  "modified_by": "Administrator",
  "module": "Frappe Training",
  "name": "Ticket",

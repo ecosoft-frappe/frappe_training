@@ -2,6 +2,7 @@
 // For license information, please see license.txt
 
 frappe.ui.form.on("Ticket", {
+
 	refresh(frm) {
         // On draft and not yet auto assigned, show Auto Assignment button
         if (frm.doc.docstatus == 0 && !frm.doc.auto_assign) {
@@ -17,4 +18,28 @@ frappe.ui.form.on("Ticket", {
             });
         }
 	},
+
+    // Demonstrate Dialog
+    update_customer: function (frm) {
+        let d = new frappe.ui.Dialog({
+            title: "Select Customer",
+            fields: [
+                {
+                    label: "Customer",
+                    fieldname: "customer",
+                    fieldtype: "Link",
+                    options: "Customer"
+                }
+            ],
+            size: "small", // small, large, extra-large 
+            primary_action_label: "Update",
+            primary_action(values) {
+                frappe.db.set_value("Ticket", frm.doc.name, "customer", values.customer).then((r) => {
+                    frm.set_value("customer", values.customer);
+                });
+                d.hide();
+            }
+        });
+        d.show();
+    },
 });
