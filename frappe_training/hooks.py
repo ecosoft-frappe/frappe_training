@@ -164,23 +164,11 @@ doc_events = {
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
-# 	"all": [
-# 		"frappe_training.tasks.all"
-# 	],
-# 	"daily": [
-# 		"frappe_training.tasks.daily"
-# 	],
-# 	"hourly": [
-# 		"frappe_training.tasks.hourly"
-# 	],
-# 	"weekly": [
-# 		"frappe_training.tasks.weekly"
-# 	],
-# 	"monthly": [
-# 		"frappe_training.tasks.monthly"
-# 	],
-# }
+scheduler_events = {
+	"all": [
+		"frappe_training.frappe_training.doctype.ticket.ticket.update_due_in_days",
+	],
+}
 
 # Testing
 # -------

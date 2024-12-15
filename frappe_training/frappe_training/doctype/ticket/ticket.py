@@ -7,21 +7,21 @@ from frappe.model.document import Document
 
 class Ticket(Document):
 	
-
 	def before_validate(self):
 		self.hours = 0.0
 		for t in self.tasks:
 			self.hours = t.hours + self.hours
 
-
 	def before_save(self):
 		if self.status == "Resolved" and self.hours == 0:
 			frappe.msgprint("Please fill in hours")
 
-	
 	def before_submit(self):
 		if not self.status:
 			frappe.throw("Please choose status as Resolved/Rejected before submit")
+	
+	def on_update(self):
+		update_due_in_days(self)
 
 
 @frappe.whitelist()
@@ -49,3 +49,21 @@ def validate_ticket_summary_creation(names):
 		"customer": customer[0],
 		"tickets": list([{"ticket": t.name, "hours": t.hours} for t in tickets])
 	}
+
+
+def update_due_in_days(doc=None):
+	sql = """
+		update tabTicket a set due_in_days = (
+			select
+			   case when datediff(due_date, CURDATE()) >= 0
+			   then datediff(due_date, CURDATE()) else 0 end
+			   as due_in_days
+			from tabTicket b where a.name = b.name
+		)
+	"""
+	if doc:
+		sql += " where a.name = '{0}'".format(doc.name)
+	frappe.db.sql(sql)
+	# If doc is provided, this is called from on_update
+	if doc:
+		doc.reload()
