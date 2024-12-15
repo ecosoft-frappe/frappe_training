@@ -1,0 +1,63 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-12-15 11:38:40.661368",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_osjd",
+  "ticket_item",
+  "column_break_lyon",
+  "hours_rate"
+ ],
+ "fields": [
+  {
+   "description": "When create Sales Invoice from Ticket Summary, use this as Item",
+   "fieldname": "ticket_item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item for Ticket",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "description": "Default rate used for Sales Invoice",
+   "fieldname": "hours_rate",
+   "fieldtype": "Currency",
+   "label": "Hours Rate"
+  },
+  {
+   "fieldname": "column_break_lyon",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Settings for Ticketing Module",
+   "fieldname": "section_break_osjd",
+   "fieldtype": "Section Break",
+   "label": "Frappe Training"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-12-15 11:44:06.773748",
+ "modified_by": "Administrator",
+ "module": "Frappe Training",
+ "name": "Ticket Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

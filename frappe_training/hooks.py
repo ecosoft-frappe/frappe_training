@@ -5,6 +5,22 @@ app_description = "Frappe Training"
 app_email = "kittiu@ecosoft.co.th"
 app_license = "mit"
 
+
+fixtures = [
+    {
+        "doctype": "Custom Field",
+        "filters": [
+            [
+                "name",
+                "in",
+                (
+                    "Sales Invoice-custom_ref_ticket_summary",
+                )
+            ]
+        ]
+    },
+]
+
 # Apps
 # ------------------
 
@@ -139,13 +155,11 @@ doctype_js = {
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-# 	}
-# }
+doc_events = {
+	"Sales Invoice": {
+		"validate": "frappe_training.custom.sales_invoice.check_duplicated_ticket_summary",
+	}
+}
 
 # Scheduled Tasks
 # ---------------
@@ -244,3 +258,4 @@ doctype_js = {
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
+bulk_transaction_task_mapper = ["frappe_training.custom.bulk_transaction.get_task_mapper"]
