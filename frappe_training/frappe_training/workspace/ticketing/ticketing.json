@@ -1,0 +1,61 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"w7-Pu1HUN6\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Ticketing</span>\",\"col\":12}},{\"id\":\"U4IqpikxXh\",\"type\":\"onboarding\",\"data\":{\"onboarding_name\":\"Ticketing\",\"col\":12}},{\"id\":\"TKXyykNO9X\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Ticket\",\"col\":3}},{\"id\":\"wY-6agnnnF\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Ticket Summary\",\"col\":3}},{\"id\":\"CNl0dNRgS7\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sales Invoice\",\"col\":3}},{\"id\":\"XllYTZ0Mtc\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Ticket Settings\",\"col\":3}}]",
+ "creation": "2024-12-15 16:10:50.008401",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "mark-as-read",
+ "idx": 0,
+ "indicator_color": "blue",
+ "is_hidden": 0,
+ "label": "Ticketing",
+ "links": [],
+ "modified": "2024-12-15 16:17:13.036787",
+ "modified_by": "Administrator",
+ "module": "Frappe Training",
+ "name": "Ticketing",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 2.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Ticket",
+   "link_to": "Ticket",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Ticket Summary",
+   "link_to": "Ticket Summary",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Sales Invoice",
+   "link_to": "Sales Invoice",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Ticket Settings",
+   "link_to": "Ticket Settings",
+   "type": "DocType"
+  }
+ ],
+ "title": "Ticketing"
+}

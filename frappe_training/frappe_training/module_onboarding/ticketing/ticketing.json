@@ -1,0 +1,32 @@
+{
+ "allow_roles": [
+  {
+   "role": "All"
+  }
+ ],
+ "creation": "2024-12-15 16:16:45.577338",
+ "docstatus": 0,
+ "doctype": "Module Onboarding",
+ "documentation_url": "https://ecosoft.co.th",
+ "idx": 0,
+ "is_complete": 0,
+ "modified": "2024-12-15 16:33:10.793221",
+ "modified_by": "Administrator",
+ "module": "Frappe Training",
+ "name": "Ticketing",
+ "owner": "Administrator",
+ "steps": [
+  {
+   "step": "Ticket Settings"
+  },
+  {
+   "step": "Create Ticket"
+  },
+  {
+   "step": "Create Ticket Summary"
+  }
+ ],
+ "subtitle": "Ticket(s) - Ticket Summary - Sales Invoice - Payment",
+ "success_message": "You are good to go!",
+ "title": "Let's setup Ticking System"
+}

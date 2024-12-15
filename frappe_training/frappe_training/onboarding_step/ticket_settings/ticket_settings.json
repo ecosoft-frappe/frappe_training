@@ -1,0 +1,23 @@
+{
+ "action": "Update Settings",
+ "action_label": "Update Ticket Settings",
+ "creation": "2024-12-15 16:22:36.660542",
+ "description": "When create Sales Invoice from Ticket Summary, system must provide Item, i.e., Support Service and Hours Rate to create it.\nClick update settings and setup Item and Hours Rate.",
+ "docstatus": 0,
+ "doctype": "Onboarding Step",
+ "field": "ticket_item",
+ "idx": 0,
+ "is_complete": 0,
+ "is_single": 1,
+ "is_skipped": 0,
+ "modified": "2024-12-15 16:26:30.483937",
+ "modified_by": "Administrator",
+ "name": "Ticket Settings",
+ "owner": "Administrator",
+ "reference_document": "Ticket Settings",
+ "show_form_tour": 0,
+ "show_full_form": 0,
+ "title": "Ticket Settings",
+ "validate_action": 1,
+ "value_to_validate": "%"
+}

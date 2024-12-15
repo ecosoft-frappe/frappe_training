@@ -13,9 +13,7 @@ frappe.ui.form.on("Ticket", {
         // On resolved and not yet used, show Create Ticket Summary button
         if (frm.doc.status == 'Resolved' && frm.doc.customer && !frm.doc.ref_ticket_summary) {
             frm.add_custom_button(__("Create Ticket Summary"), () => {
-                frappe.new_doc("Ticket Summary", {
-                    customer: frm.doc.customer
-                })
+                frappe.new_doc("Ticket Summary", { customer: frm.doc.customer })
             });
         }
 	},

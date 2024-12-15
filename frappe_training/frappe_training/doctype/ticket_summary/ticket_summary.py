@@ -17,7 +17,7 @@ class TicketSummary(Document):
 
 
 	def before_cancel(self):
-		self.flags.ignore_links = True
+		# self.flags.ignore_links = True
 		for t in self.tickets:
 			frappe.db.set_value("Ticket", t.ticket, "ref_ticket_summary", "")
 
