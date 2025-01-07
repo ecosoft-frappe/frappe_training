@@ -25,7 +25,7 @@ class Ticket(Document):
 
 
 @frappe.whitelist()
-def validate_ticket_summary_creation(names):
+def create_ticket_summary(names):
 	names = json.loads(names)
 	tickets = frappe.db.get_all("Ticket", filters={"name": ["in", names]}, fields=["name", "customer", "status", "hours", "ref_ticket_summary"])
 	# Test that all names must be in the same customer, resolved and not linked to any Ticket Summary

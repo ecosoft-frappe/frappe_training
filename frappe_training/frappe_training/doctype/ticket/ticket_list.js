@@ -18,7 +18,7 @@ frappe.listview_settings["Ticket"] = {
 		}
 	},
 	onload: function (listview) {
-        var method = "frappe_training.frappe_training.doctype.ticket.ticket.validate_ticket_summary_creation";
+        var method = "frappe_training.frappe_training.doctype.ticket.ticket.create_ticket_summary";
 		listview.page.add_action_item(__("Create Ticket Summary"), function () {
             frappe.call({
                 method: method,
